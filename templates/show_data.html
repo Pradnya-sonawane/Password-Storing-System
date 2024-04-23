@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Your data{% endblock %}
+{% block content %}
+<div class="container">
+	<h1>Your Data</h1>
+    <p>
+    <div style="margin: 0 auto; width: fit-content; text-align: left;">
+    <span style="display: inline-block;"><strong>Email:</strong></span><span style="display: inline;"> {{data['email']}}</span><br>
+    <span style="display: inline-block;"><strong>Website Name:</strong></span><span style="display: inline;"> {{data['web_name']}}</span><br>
+    <span style="display: inline-block;"><strong>Password:</strong></span><span style="display: inline;"> {{data['password']}}</span><br>
+    </div>
+    
+        
+    </p>
+    
+	
+	<a href="{{ url_for('search_page', user_id=user_id) }}" class="btn btn-primary">Back</a>
+	<a href="{{ url_for('home') }}" class="btn btn-primary">Home</a>
+	</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

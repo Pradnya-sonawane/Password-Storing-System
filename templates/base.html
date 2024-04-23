@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block styles %}
+    <!-- Adding Bootstrap-Flask styling here -->
+    
+    {{ bootstrap.load_css() }}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 400px; /* Adjust the max-width as needed */
+            width: 100%; /* Ensure the container takes full width */
+            padding: 20px;
+            text-align: center;
+            background-color: #fff; /* Optional: Adding a background color to visually see the container */
+            border-radius: 8px; /* Optional: Adding rounded corners to the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+        h1 {
+            color: #007bff;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .home-content h2 {
+            margin: 20px; /* Add some spacing between headings */
+            color: #333; /* Change color for consistency */
+        }
+        .home-content a {
+            display: block;
+            margin-bottom: 10px; /* Add some spacing between links */
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        <!-- Content goes here -->
+        {% endblock %}
+    </div>
+</body>
+</html>
